@@ -1,0 +1,39 @@
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-close:before {
+  content: "\e902";
+}
+.icon-instagram-logo:before {
+  content: "\e903";
+}
+.icon-facebook-logo:before {
+  content: "\e907";
+}
+.icon-tachometer:before {
+  content: "\e904";
+}
+.icon-clock:before {
+  content: "\e905";
+}
+.icon-location:before {
+  content: "\e906";
+}
+.icon-left-arrow:before {
+  content: "\e900";
+}
+.icon-right-arrow:before {
+  content: "\e901";
+}

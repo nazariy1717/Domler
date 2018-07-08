@@ -1,0 +1,86 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.footer{
+  padding: 75px 0 55px 0;
+  background: url(../img/action-asphalt-auto-210019.jpg) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__column{
+    margin-bottom: 30px;
+  }
+  &__title{
+    display: block;
+    color: white;
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    display: block;
+    color: white;
+    line-height: 30px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__txt{
+    color: white;
+
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    font-style: italic;
+    span{
+      display: block;
+    }
+  }
+  &__soc{
+    text-align: center;
+    li{
+      display: inline-block;
+      margin: 0 10px;
+      a{
+        color: #fff;
+        font-size: 24px;
+        @include transition;
+        &:hover{
+          color: var(--col-primary);
+        }
+      }
+    }
+  }
+  &__link{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    @include transition;
+    i{
+      font-size: 14px;
+    }
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
+}
+
+
+.copyright{
+  height: 65px;
+  line-height: 65px;
+  &__link{
+    display: inline-block;
+    color: var(--col-black);
+    font-family: Montserrat,sans-serif;;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    @include transition;
+    &:hover{
+      color: var(--col-primary);
+    }
+  }
+}
