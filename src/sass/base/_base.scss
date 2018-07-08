@@ -22,16 +22,30 @@ strong{
 .text-left    { text-align: left;   }
 
 
+.app-subtitle{
+  position: relative;
+  color: var(--col-black);
+  font-family: 'Montserrat',sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+}
 
 .app-title{
   position: relative;
   display: block;
-
+  color: var(--col-black);
+  font-family: 'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  text-transform: uppercase;
 }
 
 .app-txt{
   display: block;
-  color: black;
+  color: var(--col-black);
   font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 400;
