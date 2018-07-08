@@ -26,44 +26,16 @@ strong{
 .app-title{
   position: relative;
   display: block;
-  font-family: 'Russo One','Open Sans',sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: var(--col-black);
-  &.--white{  color: #fff;  }
-  &.--red{  color: var(--col-primary);  }
-  &.--theme{
-    &:before, &:after{
-      content: '';
-      position: absolute;
-      top: 16px;
-      width: 122px;
-      height: 1px;
-      background-color: var(--col-primary);
-    }
-    &:before{
-      left: calc(50% - 175px);
-      transform: translate(-50%);
-    }
-    &:after{
-      right: calc(50% - 175px);
-      transform: translate(50%);
-    }
-  }
+
 }
 
 .app-txt{
   display: block;
-  font-family: 'Open Sans',sans-serif;
+  color: black;
+  font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 20px;
-  &.--white{
-    color: #fff;
-  }
+  line-height: 26px;
 }
 
 // end of text classes
@@ -75,24 +47,6 @@ strong{
 
 .section{
   position: relative;
-  z-index: 1;
-  &__overlay{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    &.--theme-1{
-      background-color: rgba(0,0,0, .83);
-    }
-    &.--theme-2{
-      background-color: rgba(0,0,0, .83);
-    }
-  }
-  &__content{
-    position: relative;
-    z-index: 9;
-  }
 }
 
 
@@ -130,7 +84,6 @@ strong{
 }
 
 
-
 .tab-content {
   display: none;
   animation: fadeEffect .5s;
@@ -139,8 +92,6 @@ strong{
     display: block;
   }
 }
-
-
 
 .js-panel-head{
   cursor: pointer;
