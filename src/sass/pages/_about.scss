@@ -44,14 +44,87 @@
 
 .about-success{
   margin-bottom: 165px;
+  &__block{
+    position: absolute;
+    right: 0;
+    width: 785px;
+    height: 175px;
+    padding: 40px;
+    transform: translateY(30px);
+    background-color: white;
+    box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
+    &-title{
+      display: block;
+      position: absolute;
+      bottom: -40px;
+      left: 90px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 34px;
+      text-transform: uppercase;
+    }
+  }
+  &__count{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 15px;
+    &:after{
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: -10px;
+      width: 35px;
+      height: 35px;
+      z-index: -1;
+      background-color: yellow;
+    }
+  }
+  &__txt{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
 }
 
 .about-section-2{
-  height: 585px;
-  background: url(../img/about-section-3.png) center no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
   margin-bottom: 220px;
+  &__content{
+    position: relative;
+    height: 550px;
+    background: url(../img/about-section-2.png) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  &__item{
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 100%;
+    max-width: 410px;
+    height: 271px;
+    padding: 40px 50px 10px 20px;
+    background-color: var(--col-yellow);
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &__txt{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
 }
 
 .about-section-3{
@@ -67,22 +140,24 @@
     width: 100%;
     max-width: 395px;
     height: 465px;
-    padding: 55px 15px 55px 55px;
+    padding: 60px 10px 30px 35px;
     background-color: #fff;
     box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
   }
   &__title{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 36px;
     text-transform: uppercase;
+    margin-bottom: 25px;
   }
-  &__subtitle{
-    display: block;
+  &__txt{
     font-size: 14px;
-    font-weight: 600;
-    line-height: 30px;
-    text-transform: uppercase;
-    margin-bottom: 55px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    max-width: 190px;
   }
 }

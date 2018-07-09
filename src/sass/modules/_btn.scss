@@ -41,54 +41,24 @@
   }
 }
 
-.btn-share{
-  width: 170px;
-  padding: 0;
-  height: 40px;
-  border-radius: 4px;
-  background-color: #fff;
-  border: solid 1px #d4d4d4;
-  cursor: pointer;
-  text-align: center;
-  line-height: 40px;
-  font-family: 'Myriad Pro', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--col-black);
-  @include transition;
-  i{
-    position: relative;
-    margin-right: 10px;
-    top: 2px;
-  }
-  &:hover{
-    box-shadow: 0 0 13px rgba(78, 78, 78, 0.2);
-  }
-}
 
 .btn-link{
   display: inline-block;
   position: relative;
-  padding-right: 20px;
+  padding-right: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
   text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: normal;
-  color: var(--col-primary);
-  &.--grey{
-    color: #a0a0a0;
-    &:after{
-      color: #a0a0a0;
-    }
-  }
+  color: var(--col-black);
   &:after{
-    content: "\e915";
+    content: "\e901";
     font-family: 'icomoon' !important;
     position: absolute;
-    top: 1px;
+    top: -1px;
     right: 0;
-    font-size: 14px;
-    color: var(--col-primary);
+    font-size: 18px;
+    color: var(--col-black);
     transition: all 0.25s ease;
   }
   &:hover{
@@ -96,33 +66,7 @@
       transform: translateX(5px);
     }
   }
-  &.--left{
-    padding-left: 20px;
-    padding-right: 0;
-    &:after{
-      left: 0;
-      right: initial;
-      transform: scale(-1);
-    }
-    &:hover{
-      &:after{
-        transform: translateX(-5px) scale(-1);
-      }
-    }
-  }
-  &.--plus{
-    &:after{
-      content: "\e91e";
-      font-size: 26px;
-      top: -4px;
-      left: -4px;
-    }
-    &:hover{
-      &:after{
-        transform: rotate(90deg);
-      }
-    }
-  }
+
 }
 
 .btn-right{
