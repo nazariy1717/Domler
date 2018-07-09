@@ -20,8 +20,26 @@
     padding: 55px;
     background-color: var(--col-yellow);
   }
-  &__{}
-  &__{}
+  &__title{
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 85px;
+  }
+  &__txt{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    &.--upper{
+      text-transform: uppercase;
+    }
+    & + &{
+      margin-top: 35px;
+    }
+    span{
+      display: block;
+    }
+  }
 }
 
 

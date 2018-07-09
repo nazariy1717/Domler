@@ -1,7 +1,8 @@
 let front = {
 
     hamburger: $('.hamburger'),
-    nav: $('.header__list'),
+    nav: $('.header-mobile'),
+    header_drop: $('.header-drop'),
 
     slider_options_default: {
         wrapAround: true,
@@ -15,6 +16,7 @@ let front = {
 
     init: function () {
         this.events();
+        this.headerScroll();
     },
 
     newSlider: function (selector, options) {
@@ -23,23 +25,87 @@ let front = {
         return new Flickity(document.querySelector(selector), options);
     },
 
+
+    headerScroll: function(){
+        if( $(window).scrollTop() > 0){
+            $('.header').addClass('js-fixed');
+        } else {
+            $('.header').removeClass('js-fixed');
+        }
+    },
+
     toogleNav: function(){
         if (!this.hamburger.hasClass('is-active')) {
             this.hamburger.addClass("is-active");
-            this.nav.slideToggle();
+            this.nav.toggleClass('js-show');
+            $('.header').addClass('js-open');
         }
         else {
             this.hamburger.removeClass("is-active");
-            this.nav.slideToggle();
+            this.nav.toggleClass('js-show');
         }
     },
+
+    toggleHeaderDrop: function(){
+        if (!this.header_drop.hasClass('is-active')) {
+            this.header_drop.addClass("is-active");
+        }
+        else {
+            this.header_drop.removeClass("is-active");
+        }
+    },
+
+    togglePlaylistDrop: function(){
+        if (!$('.playlist-drop').hasClass('is-active')) {
+            $('.playlist-drop').addClass("is-active");
+        }
+        else {
+            $('.playlist-drop').removeClass("is-active");
+        }
+    },
+
+
+    openTab: function (element, tabName, parent) {
+        let i, tab_content, tab_links;
+
+        tab_content = $(element).closest(parent).find('.page-tabs__wrap').find('.tab-content');
+        for (i = 0; i < tab_content.length; i++) {
+            tab_content[i].style.display = "none";
+        }
+
+        tab_links = $(element).closest('.tabs-ul').find('.tab-links');
+
+        for (i = 0; i < tab_links.length; i++) {
+            tab_links[i].className = tab_links[i].className.replace(" active", "");
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        $(element).addClass('active');
+    },
+
 
     events: function () {
         let self = this;
 
+        $(window).on('scroll',function(){
+            self.headerScroll();
+        });
+
         $(document).on('click', '.hamburger', function () {
             self.toogleNav();
         });
+
+        $(document).on('click', '.header-nav__link', function () {
+            if ($(window).width() + 16 < 991) {
+                $(this).toggleClass('js-link-active');
+            }
+        });
+        $(document).on('click', '.header-drop__link.--drop', function () {
+            if ($(window).width() + 16 < 991) {
+                $(this).toggleClass('js-link-active');
+            }
+        });
+
 
         $('.js-scrollLink').on('click', function (e) {
             e.preventDefault();
@@ -50,21 +116,83 @@ let front = {
             }, 500, 'swing');
         });
 
-        $(document).on('change', '#file', function (event) {
-            let self = $(this);
-            let file = event.target.files[0];
-            let translate_txt = self.parent().find('label').attr('data-translate');
-
-            let fileExtension = ['jpeg', 'png', 'jpg'];
-
-            if ($.inArray(self.val().split('.').pop().toLowerCase(), fileExtension) == -1) {
-                self.parent().find('label').text(translate_txt + fileExtension.join(', '));
-                self.val('');
-                return false;
-            } else {
-                self.parent().find('label').text(file.name);
-            }
+        $(document).on('click', '.header-drop__btn', function () {
+            self.toggleHeaderDrop();
         });
+        $(document).on('click', '.playlist-drop__btn', function () {
+            self.togglePlaylistDrop();
+        });
+
+        $(document).on('click', '.js-panel-head', function () {
+
+            if($(this).closest('.js-panel').hasClass('js-active')){
+                $(this).closest('.js-panel').find('.js-panel-content').slideUp(function(){
+                    $(this).closest('.js-panel').removeClass('js-active');
+                });
+            } else {
+                $(this).closest('.js-panel').find('.js-panel-content').slideDown(function(){
+                    $(this).closest('.js-panel').addClass('js-active');
+                });
+            }
+
+        });
+
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.header-drop__btn')) {
+                let dropdowns = document.getElementsByClassName("header-drop");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('is-active')) {
+                        openDropdown.classList.remove('is-active');
+                    }
+                }
+            } else if (!event.target.matches('.playlist-drop__btn')) {
+                let dropdowns = document.getElementsByClassName("playlist-drop");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('is-active')) {
+                        openDropdown.classList.remove('is-active');
+                    }
+                }
+            }
+
+        };
+
+
+
+        $(document).on('click', '.spin__button-plus', function () {
+
+            let $input = $(this).parent().find('input');
+            let inputValue = $(this).parent().find('input').val();
+            inputValue++;
+            if(inputValue > 0){
+                $(this).parent().find('.spin__button-minus').removeAttr('disabled');
+            }
+            $input.val(inputValue);
+
+        });
+
+        $(document).on('click', '.spin__button-minus', function () {
+            let $input = $(this).parent().find('input');
+            let inputValue = $(this).parent().find('input').val();
+            if(inputValue == 0){
+                $(this).attr('disabled')
+            } else {
+                inputValue--;
+            }
+            $input.val(inputValue);
+        });
+
+        $(document).on('click', '.sidebar-keywords__btn', function () {
+            $(this).closest('.sidebar-keywords').toggleClass('js-active');
+        });
+
+        $(document).on('click', '.dashboard__toggle-btn', function () {
+            $(this).toggleClass('js-active');
+            $(this).parent().parent().find('.dashboard-sidebar').slideToggle();
+        });
+
 
 
     }
