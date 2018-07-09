@@ -1,0 +1,40 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+
+.tenants-section{
+  height: 620px;
+  background: url(../img/tenants-section.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 60px;
+  &__content{
+    position: relative;
+  }
+  &__item{
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    max-width: 515px;
+    height: 335px;
+    padding: 55px;
+    background-color: var(--col-yellow);
+  }
+  &__title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+  }
+}
+
