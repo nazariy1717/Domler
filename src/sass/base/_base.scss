@@ -54,6 +54,10 @@ strong{
   line-height: 36px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  &.--extra{
+    font-size: 36px;
+    line-height: 60px;
+  }
 }
 
 .app-txt{
