@@ -1,0 +1,37 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.contacts-info{
+  height: 620px;
+  background: url(../img/contacts-info.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 75px;
+  &__content{
+    position: relative;
+  }
+  &__item{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -50px;
+    height: 485px;
+    max-width: 450px;
+    padding: 55px;
+    background-color: var(--col-yellow);
+  }
+  &__{}
+  &__{}
+}
+
+
+.contacts-map{
+  margin-bottom: 125px;
+}
+
+#contacts_map{
+  max-width: 850px;
+  height: 640px;
+  margin-left: auto;
+  margin-right: 0;
+}

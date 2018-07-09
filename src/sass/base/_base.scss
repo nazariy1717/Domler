@@ -24,12 +24,24 @@ strong{
 
 .app-subtitle{
   position: relative;
+  display: inline-block;
   color: var(--col-black);
   font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: -10px;
+    bottom: 3px;
+    z-index: -1;
+    height: 8px;
+    background-color: var(--col-primary);
+  }
 }
 
 .app-title{
@@ -41,6 +53,7 @@ strong{
   font-weight: 600;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .app-txt{

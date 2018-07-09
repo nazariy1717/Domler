@@ -9,28 +9,190 @@
 <body>
 
 
+<div class="page">
 
-<section class="section contacts">
-    <div class="container">
-        <div class="row m-row">
-            <div class="column col-lg-3">
-                <p class="app-subtitle">залишились запитання?</p>
-                <span class="app-title">напишіть нам</span>
-            </div>
-            <div class="column col-lg-9">
-
+    <header class="header">
+        <div class="container">
+            <div class="row m-row header__row align-middle align-right">
+                <div class="column header__column">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="/" class="header__link">Головна</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link">Орендарям</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link">Орендодавцям</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link">Про нас</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link active">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column col-lg-3 header__column">
+                    <div class="header__phone">
+                        <p>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer class="footer"></footer>
+    <section class="section page__top">
+        <div class="container">
+            <h1 class="app-title">наші контакти</h1>
+            <p class="page__subtitle">Завітайте до нас. Ми завжди раді гостям.</p>
+        </div>
+    </section>
+
+    <section class="section contacts-info">
+        <div class="container">
+            <div class="contacts-info__content">
+                <div class="contacts-info__item">
+                    <span class="contacts-info__title">заходьте в гості</span>
+                    <p class="contacts-info__txt">
+                        <span>+38098 09 55 687</span>
+                        <span>+38063 026 06 43 (Viber)</span>
+                        <span>+38099 763 98 82</span>
+                    </p>
+                    <p class="contacts-info__txt">Вул.Лазаренка 2 офіс 217</p>
+                    <p class="contacts-info__txt">info@domler.com.ua</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contacts-map">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-3">
+                    <p class="app-subtitle">залишились запитання?</p>
+                    <span class="app-title">напишіть нам</span>
+                    <form action="/" id="contact_form">
+                        <div class="form__group-20">
+                            <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                        </div>
+                        <div class="form__group-20">
+                            <input type="text" name="phone" class="form__input" placeholder="Телефон">
+                        </div>
+                        <div class="form__group-20">
+                            <input type="email" name="email" class="form__input" placeholder="E-mail">
+                        </div>
+                        <div class="form__group-20">
+                            <textarea name="" class="form__area" placeholder="Повідомлення"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Надіслати</span>
+                            <span>Надіслати</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="column col-lg-9">
+                    <div id="contacts_map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-3">
+                    <a href="/" class="footer__logo">Logo</a>
+                </div>
+                <div class="column col-lg-2">
+                    <span class="footer__title">Карта сайту</span>
+                    <ul class="footer__list">
+                        <li><a href="/">Головна</a></li>
+                        <li><a href="/">Орендодавцям</a></li>
+                        <li><a href="/">Орендарям</a></li>
+                        <li><a href="/">Про нас</a></li>
+                        <li><a href="/">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="column col-lg-4">
+                    <span class="footer__title">контакти</span>
+                    <p class="footer__txt">
+                        <span>info@domler.com.ua</span>
+                        <br>
+                        <span>+38098 09 55 687</span>
+                        <span> +38063 026 06 43 (Viber)</span>
+                        <span>+38099 763 98 82</span>
+                        <br>
+                        <span>Вул. Лазаренка 2 офіс 217</span>
+                        <span>(3 поверх)</span>
+                    </p>
+                </div>
+                <div class="column col-lg-3">
+                    <span class="footer__title">Підписатись на оновлення</span>
+                    <p class="footer__txt">У нас завжди цікаво!</p><br>
+                    <div class="footer__form">
+                        <form action="/" id="footer__form">
+                            <input type="email" name="email" class="form__input footer__input" placeholder="info@domler.com.ua">
+                            <button class="btn btn-primary footer__btn">
+                                <span>Надіслати</span>
+                                <span>Надіслати</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <a href="http://letarget.com.ua" class="copyright__link" target="_blank">developed by letarget</a>
+        </div>
+    </div>
+
+</div>
+
 
 
 
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
 <script src="js/front.js"></script>
+<script type="text/javascript">
+    function initMap() {
+        let locations = [
+            ['Lviv', 49.843926,  24.026180]
+        ];
+        let map = new google.maps.Map(document.getElementById('contacts_map'), {
+            zoom: 12,
+            center: new google.maps.LatLng(49.843926, 24.026180),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        let infowindow = new google.maps.InfoWindow();
+
+        let marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                icon: '/src/img/marker.png'
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3b1gPEjeBRZJXI5DJyCE4RJl-4PULenI&callback=initMap"></script>
 
 </body>
 </html>
