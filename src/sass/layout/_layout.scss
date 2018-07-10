@@ -4,6 +4,9 @@
 
 .page{
   padding-top: 225px;
+  @media (max-width: $breakpoint-lg){
+    padding-top: 125px;
+  }
   &__top{
     margin-bottom: 120px;
   }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+
+    <link href="css/build.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="page">
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+            <div class="row m-row header__row align-middle align-right">
+                <div class="column header__column">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="/" class="header__link">Головна</a>
+                        </li>
+                        <li class="header__item --drop">
+                            <a class="header__link">Орендарям</a>
+                            <ul class="header__sublist">
+                                <li>
+                                    <a href="/" class="header__link">квартири</a>
+                                </li>
+                                <li>
+                                    <a href="/" class="header__link">офіси</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link">Орендодавцям</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link">Про нас</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="/" class="header__link active">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column col-lg-3 header__column">
+                    <div class="header__phone">
+                        <span>+38098 09 55 687</span>
+                        <span> +38063 02 60 643</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="hamburger">
+            <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="section object">
+            <div class="container">
+                <div class="row m-row">
+                    <div class="col-lg-6 column">
+                        <div class="row m-row object__row">
+                            <div class="column">
+                                <div class="object__nav">
+                                    <div class="object__nav-cell">
+                                        <img src="img/carousel-item.png" class="image">
+                                    </div>
+                                    <div class="object__nav-cell">
+                                        <img src="img/carousel-item.png" class="image">
+                                    </div>
+                                    <div class="object__nav-cell">
+                                        <img src="img/carousel-item.png" class="image">
+                                    </div>
+                                    <div class="object__nav-cell">
+                                        <img src="img/carousel-item.png" class="image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="object__carousel">
+                                    <div class="object__carousel-cell" style="background-image: url(img/carousel-item.png);"></div>
+                                    <div class="object__carousel-cell" style="background-image: url(img/carousel-item.png);"></div>
+                                    <div class="object__carousel-cell" style="background-image: url(img/carousel-item.png);"></div>
+                                    <div class="object__carousel-cell" style="background-image: url(img/carousel-item.png);"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-6 column">
+                        <div class="object-content">
+                            <h1 class="object-content__title">1-кімнатна квартира вул. Ч. Калини  </h1>
+                            <span class="object-content__price">300$</span>
+
+                            <ul class="row m-row">
+                                <li class="column object-content__item">
+                                    <div class="object-content__item-icon icon-selection"></div>
+                                    <span class="object-content__item-txt">Площа: 46м2 </span>
+                                </li>
+                                <li class="column object-content__item">
+                                    <div class="object-content__item-icon icon-home"></div>
+                                    <span class="object-content__item-txt">1-кімнатна</span>
+                                </li>
+                                <li class="column object-content__item">
+                                    <div class="object-content__item-icon icon-holidays"></div>
+                                    <span class="object-content__item-txt">Поверх: 3</span>
+                                </li>
+                                <li class="column object-content__item">
+                                    <div class="object-content__item-icon icon-armchair"></div>
+                                    <span class="object-content__item-txt">Всі меблі</span>
+                                </li>
+                                <li class="column object-content__item">
+                                    <div class="object-content__item-icon icon-washing-machine"></div>
+                                    <span class="object-content__item-txt">Побутова техніка</span>
+                                </li>
+                            </ul>
+
+                            <p class="object-content__desc">
+                                1-кімнатна квартира
+                                Вул.Ч.Калини
+                                поверх: 3/9площа: 46м2
+                                У відмінному стані. Всі необхідні
+                                меблі та побутова техніка є. Квартира
+                                простора, велика: зал 20 кв.м., кухня 17 кВ.м
+                            </p>
+
+                            <button data-modal="#order_modal" class="btn btn-primary object-content__btn modalTrigger">
+                                <span>Замовити</span>
+                                <span>Замовити</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-3 footer__column">
+                    <a href="/" class="footer__logo">Logo</a>
+                </div>
+                <div class="column col-lg-2 footer__column">
+                    <span class="footer__title">Карта сайту</span>
+                    <ul class="footer__list">
+                        <li><a href="/">Головна</a></li>
+                        <li><a href="/">Орендодавцям</a></li>
+                        <li><a href="/">Орендарям</a></li>
+                        <li><a href="/">Про нас</a></li>
+                        <li><a href="/">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="column col-lg-3 footer__column">
+                    <span class="footer__title">контакти</span>
+                    <p class="footer__txt">
+                        <span>info@domler.com.ua</span>
+                        <br>
+                        <span>+38098 09 55 687</span>
+                        <span> +38063 026 06 43 (Viber)</span>
+                        <span>+38099 763 98 82</span>
+                        <br>
+                        <span>Вул. Лазаренка 2 офіс 217</span>
+                        <span>(3 поверх)</span>
+                    </p>
+                </div>
+                <div class="column col-lg-4 footer__column">
+                    <span class="footer__title">Підписатись на оновлення</span>
+                    <p class="footer__txt">У нас завжди цікаво!</p><br>
+                    <div class="footer__form">
+                        <form action="/" id="footer__form">
+                            <input type="email" name="email" class="form__input footer__input" placeholder="info@domler.com.ua">
+                            <button class="btn btn-primary footer__btn">
+                                <span>Надіслати</span>
+                                <span>Надіслати</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <a href="http://letarget.com.ua" class="copyright__link" target="_blank">developed by letarget</a>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal" id="order_modal">
+    <div class="modal__body">
+        <div class="modal__content order-modal">
+            <span class="modal__close icon-close"></span>
+            <span class="modal__title">Зробити замовленя</span>
+            <form action="/" id="user_form">
+
+                <div class="form__group-30">
+                    <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                </div>
+                <div class="form__group-30">
+                    <input type="text" name="phone" class="form__input" placeholder="Телефон">
+                </div>
+                <div class="form__group-30">
+                    <textarea name="message" class="form__area --modifier" placeholder="Повідомлення"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary modal__btn">
+                    <span>надіслати</span>
+                    <span>надіслати</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/libs/jquery-3.2.1.min.js"></script>
+<script src="js/libs/flickity.pkgd.min.js"></script>
+<script src="js/front.js"></script>
+<script type="text/javascript">
+    front.newSlider('.object__carousel',{prevNextButtons: false});
+    front.newSlider('.object__nav', {draggable: false, asNavFor: '.object__carousel'});
+</script>
+</body>
+</html>

@@ -85,6 +85,21 @@
 
 }
 
+.order-modal{
+  position: relative;
+  overflow: hidden;
+  padding: 30px 145px;
+  max-width: 600px;
+  .modal__title{
+    margin-bottom: 15px;
+  }
+  .form__input{
+    height: 45px;
+  }
+  .form__area{
+    height: 100px;
+  }
+}
 
 
 
