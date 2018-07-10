@@ -11,6 +11,10 @@
     font-size: 60px;
     font-weight: 700;
     line-height: 60px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 34px;
+      line-height: 65px;
+    }
   }
   &__title{
     display: block;
@@ -21,6 +25,10 @@
     line-height: 24px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__list{
     li{
@@ -30,6 +38,10 @@
         font-size: 16px;
         font-weight: 400;
         @include transition;
+        @media (max-width: $breakpoint-lg){
+          font-size: 12px;
+          line-height: 18px;
+        }
         &:hover{
           color: var(--col-black);
         }
@@ -42,6 +54,10 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 12px;
+      line-height: 18px;
+    }
     span{
       display: block;
     }
@@ -53,6 +69,9 @@
     border: 1px solid black;
     height: 55px;
     padding: 0 115px 0 10px;
+    @media (max-width: $breakpoint-lg){
+      height: 35px;
+    }
   }
   &__btn{
     position: absolute;
@@ -62,6 +81,15 @@
     height: 55px;
     background-color: var(--col-black);
     color: #fff;
+    @media (max-width: $breakpoint-lg){
+      height: 35px;
+      span{
+        line-height: 35px;
+        &:hover{
+          transform: translateY(-35px);
+        }
+      }
+    }
   }
 }
 

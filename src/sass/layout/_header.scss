@@ -33,11 +33,18 @@
   &__content{
     @media (max-width: $breakpoint-lg){
       //display: none;
+      transform: translateX(calc(100% + 15px));
       position: absolute;
+      padding: 75px 5px 50px 0;
       right: 0;
-      width: 150px;
+      width: 165px;
       background-color: white;
+      text-align: right;
       box-shadow: 1px 1.7px 17.9px 3.2px rgba(0, 0, 0, 0.22);
+      @include transition;
+      &.js-show{
+        transform: translateX(0);
+      }
       .header__row{
         height: initial!important;
       }
@@ -56,6 +63,16 @@
     padding: 10px 5px;
     background-color: white;
     box-shadow: 0 4px 5.5px 1.5px rgba(0, 0, 0, 0.13);
+    @media (max-width: $breakpoint-lg){
+      display: block;
+      position: relative;
+      width: auto;
+      padding: 0;
+      box-shadow: none;
+      li{
+        margin-top: 10px;
+      }
+    }
     li + li{
       margin-bottom: 10px;
     }
@@ -63,8 +80,15 @@
   &__item{
     position: relative;
     display: inline-block;
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 20px;
+      display: block;
+    }
     & + & {
       margin-left: 30px;
+      @media (max-width: $breakpoint-lg){
+        margin-left: 0;
+      }
     }
     &.--drop{
       &:hover{
@@ -82,6 +106,9 @@
     font-weight: 500;
     text-transform: uppercase;
     @include transition;
+    @media (max-width: $breakpoint-lg){
+      font-size: 14px;
+    }
     &:before{
       content: '';
       position: absolute;
@@ -114,6 +141,10 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 14px;
+      padding-left: 30px;
+    }
     &:before{
       content: "\e900";
       font-family: 'icomoon' !important;
@@ -123,6 +154,10 @@
       transform: translateY(-50%);
       font-size: 27px;
       color: var(--col-primary);
+      @media (max-width: $breakpoint-lg){
+        font-size: 22px;
+        left: 5px;
+      }
     }
     span{
       display: block;
