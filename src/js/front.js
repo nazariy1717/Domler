@@ -59,8 +59,12 @@ let front = {
             self.toogleNav();
         });
 
-
-
+        $(document).on('click', '.side-form__button', function () {
+            $(this).parent().toggleClass('js-active');
+        });
+        $(document).on('click', '.side-form__arrow', function () {
+            $(this).closest('.side-form').toggleClass('js-active');
+        });
 
 
     }

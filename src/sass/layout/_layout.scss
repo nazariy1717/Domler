@@ -30,3 +30,71 @@
   }
 }
 
+.side-form{
+  &__button{
+    position: fixed;
+    right: 0;
+    top: 250px;
+    z-index: 9;
+    transform: translateX(50px) rotate(-90deg);
+    cursor: pointer;
+    height: 40px;
+    width: 140px;
+    line-height: 40px;
+    text-align: center;
+    background-color: yellow;
+    color: #424242;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media (max-width: $breakpoint-lg){
+      top: 175px;
+    }
+  }
+  &__item{
+    position: fixed;
+    width: 375px;
+    right: 0;
+    top: 200px;
+    z-index: 9;
+    transform: translateX(calc(100% + 15px));
+    padding: 70px 75px 25px 45px;
+    background-color: #fff;
+    @include transition;
+    box-shadow: 0 2px 17.9px 3.2px rgba(0, 0, 0, 0.22);
+    @media (max-width: $breakpoint-lg){
+      top: 120px;
+    }
+    @media (max-width: $breakpoint-md){
+      width: 300px;
+      padding: 45px 15px;
+    }
+    .form__input, .form__select{
+      height: 45px;
+    }
+    .btn-primary{
+      height: 40px;
+      span{
+        line-height: 40px;
+      }
+      &:hover{
+        span{
+          transform: translateY(-40px);
+        }
+      }
+    }
+  }
+  &.js-active{
+    .side-form__item{
+      transform: translateX(0);
+    }
+  }
+  &__arrow{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 28px;
+    opacity: 0.22;
+    cursor: pointer;
+  }
+}
