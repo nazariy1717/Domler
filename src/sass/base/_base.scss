@@ -124,17 +124,44 @@ strong{
   }
 }
 
-.js-panel-head{
-  cursor: pointer;
-}
-.js-panel-content{
-  display: none;
-}
 
-.js-panel{
-  &.js-active{
-    .js-panel-content{
-      //display: block;
+
+.pagination{
+  &__list{}
+  &__item{
+    display: inline-block;
+    & + &{
+      margin-left: 10px;
+    }
+  }
+  &__link{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-transform: uppercase;
+    @include transition;
+    &:before{
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      z-index: -1;
+      height: 6px;
+      width: 0;
+      background-color: var(--col-yellow);
+      @include transition;
+    }
+    &.active{
+      &:before{
+        width: 18px;
+      }
+    }
+    &:hover{
+      &:before{
+        width: 18px;
+      }
     }
   }
 }
