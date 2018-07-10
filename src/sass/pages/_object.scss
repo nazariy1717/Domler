@@ -7,9 +7,15 @@
   &__row{
     .column:nth-child(1){
       @include grid-size(145px);
+      @media (max-width: $breakpoint-sm){
+        @include grid-size(100%);
+      }
     }
     .column:nth-child(2){
       @include grid-size(calc(100% - 145px));
+      @media (max-width: $breakpoint-sm){
+        @include grid-size(100%);
+      }
     }
   }
   &__{}
@@ -19,18 +25,20 @@
     top: 0;
     height: 115px;
     width: 500px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    -webkit-transform-origin: 55px 55px;
-    -ms-transform-origin: 55px 55px;
     transform-origin: 55px 55px;
+    @media (max-width: $breakpoint-sm){
+      display: none;
+    }
     &.flickity-enabled.is-draggable .flickity-viewport{
       cursor: default;
     }
     .flickity-prev-next-button{
       @include transition;
       opacity: 0;
+      @media (max-width: $breakpoint-lg){
+        opacity: 1;
+      }
     }
     &:hover{
       .flickity-prev-next-button{
@@ -42,28 +50,46 @@
       width: 150px;
       height: 100%;
       margin-right: 20px;
+      @media (max-width: $breakpoint-sm){
+        margin-right: 0;
+        padding: 0 10px;
+      }
       img{
         position: absolute;
         width: 115px;
         height: 150px;
         top: 50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%) rotate(-90deg);
         transform: translate(-50%, -50%) rotate(-90deg);
-        -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
+        @media (max-width: $breakpoint-sm){
+          position: initial;
+          left: initial;
+          top: initial;
+          height: initial;
+          width: initial;
+          transform: initial;
+          transform-origin: initial;
+        }
       }
     }
   }
 
 
   &__carousel{
+    max-width: 440px;
     &-cell{
       width: 100%;
       height: 500px;
       background: center no-repeat;
       -webkit-background-size: cover;
       background-size: cover;
+      @media (max-width: $breakpoint-sm){
+        height: 400px;
+      }
+      @media (max-width: 374px){
+        height: 350px;
+      }
     }
   }
   &__{}
@@ -76,6 +102,9 @@
   position: relative;
   height: 100%;
   padding-bottom: 75px;
+  @media (max-width: $breakpoint-lg){
+    margin-top: 45px;
+  }
   &__title{
     font-size: 24px;
     font-weight: 600;

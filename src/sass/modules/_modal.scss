@@ -90,6 +90,11 @@
   overflow: hidden;
   padding: 30px 145px;
   max-width: 600px;
+  @media (max-width: $breakpoint-sm) {
+    padding: 30px 15px;
+    max-width: 320px;
+
+  }
   .modal__title{
     margin-bottom: 15px;
   }
