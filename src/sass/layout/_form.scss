@@ -21,7 +21,11 @@ input[type=number]::-webkit-outer-spin-button {
   &__group-50{  margin-bottom: 50px;position: relative;  }
 
   &__label{
-
+    color: #7c7a7a;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 20px;
   }
 
   &__area{
@@ -36,6 +40,9 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 14px;
     font-weight: 400;
     color: var(--col-black);
+    &.--modifier{
+      height: 150px;
+    }
   }
 
   &__input, &__select{
@@ -49,6 +56,9 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 14px;
     font-weight: 400;
     color: var(--col-black);
+    &.--modifier{
+      height: 45px;
+    }
   }
 
   input:disabled {
@@ -75,24 +85,28 @@ span.error-valid{
   font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 400;
+  font-style: italic;
 }
 ::-moz-placeholder {
   color: #8c8c8c;
   font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 400;
+  font-style: italic;
 }
 :-ms-input-placeholder {
   color: #8c8c8c;
   font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 400;
+  font-style: italic;
 }
 :-moz-placeholder {
   color: #8c8c8c;
   font-family: 'Montserrat',sans-serif;
   font-size: 14px;
   font-weight: 400;
+  font-style: italic;
 }
 
 

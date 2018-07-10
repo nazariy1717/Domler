@@ -1,0 +1,138 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.lessors-section{
+  height: 620px;
+  background: url(../img/lessors-section.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 100px;
+  &__content{
+    position: relative;
+  }
+  &__item{
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    max-width: 515px;
+    height: 335px;
+    padding: 55px;
+    background-color: var(--col-yellow);
+  }
+  &__title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+  }
+}
+
+
+.lessors-object{
+  margin-bottom: 220px;
+  &__content{
+    max-width: 525px;
+  }
+  &__img{
+    margin-right: 0;
+    margin-left: auto;
+  }
+  &__block{
+    position: absolute;
+    left: 15px;
+    width: 910px;
+    height: 188px;
+    z-index: 9;
+    transform: translateY(50px);
+    background-color: white;
+    padding: 30px 20px 20px 20px;
+    box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
+  }
+  &__item{
+    @include grid-size(20%);
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 105px;
+      background-color: var(--col-black);
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &-icon{
+      font-size: 45px;
+      text-align: center;
+      padding: 30px 0;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        z-index: -1;
+        width: 42px;
+        height: 42px;
+        background-color: var(--col-yellow);
+      }
+    }
+    &-txt{
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 34px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.lessors-contacts{
+  margin-bottom: 150px;
+  &__txt{
+    margin: auto auto 55px;
+    max-width: 580px;
+  }
+  &__phone{
+    position: relative;
+    max-width: 200px;
+    margin: auto;
+    padding-left: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    &:before {
+      content: "\e900";
+      font-family: 'icomoon' !important;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 27px;
+      color: var(--col-primary);
+    }
+    span {
+      display: block;
+    }
+  }
+
+  &__btn{
+    max-width: 220px;
+    margin: auto;
+  }
+}

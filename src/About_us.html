@@ -143,6 +143,7 @@
     </section>
 
 
+
     <section class="section about-section about-section-3">
         <div class="container">
             <div class="about-section__content">
@@ -156,10 +157,10 @@
                         ріелтором буде у зручний для вас час. Фахівці
                         агентства допоможуть вам зняти житло у
                         Львові .</p>
-                    <a href="/" class="btn btn-primary about-section-3__btn">
+                    <button type="button" data-modal="#user_modal" class="btn btn-primary about-section-3__btn modalTrigger">
                         <span>Найняти нас</span>
                         <span>Найняти нас</span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -227,6 +228,66 @@
 
 
 
+<div class="modal" id="user_modal">
+    <div class="modal__body">
+        <div class="modal__content user-modal">
+            <span class="modal__close icon-close"></span>
+            <span class="modal__title">заповніть форму</span>
+            <form action="/" id="user_form">
+                <div class="row m-row">
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-30">
+                            <input type="text" name="name" class="form__input" placeholder="Ім’я та прізвище">
+                        </div>
+                        <div class="form__group-30">
+                            <input type="text" name="phone" class="form__input" placeholder="+3 80 .. .. .. ...">
+                        </div>
+                        <div class="form__group-30">
+                            <input type="email" name="email" class="form__input" placeholder="E-mail">
+                        </div>
+                        <div class="form__group-30">
+                            <input type="text" name="address" class="form__input" placeholder="Адреса">
+                        </div>
+                    </div>
+
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-20">
+                            <select name="date" class="form__select">
+                                <option value="0">Один місяць</option>
+                                <option value="1">2 місяць</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="price_from" class="form__label">Сума</label>
+                            <div class="row m-row">
+                                <div class="column col-lg-6">
+                                    <div class="form__group-30">
+                                        <input type="text" name="price_from" id="price_from" class="form__input --modifier" placeholder="від .... грн">
+                                    </div>
+                                </div>
+                                <div class="column col-lg-6">
+                                    <div class="form__group-30">
+                                        <input type="text" name="price_to" class="form__input --modifier" placeholder="до ... грн">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__group-30">
+                            <textarea name="" class="form__area --modifier" placeholder="Повідомлення"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="column col-xs-12">
+                        <button type="submit" class="btn btn-primary modal__btn">
+                            <span>надіслати</span>
+                            <span>надіслати</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
