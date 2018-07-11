@@ -34,6 +34,10 @@
     line-height: 50px;
     @include transition;
   }
+  &.--black{
+    color: #fff;
+    background-color: var(--col-black);
+  }
   &:hover{
     span{
       transform: translateY(-50px);
@@ -41,6 +45,38 @@
   }
 }
 
+.btn-secondary{
+  width: 100%;
+  max-width: 135px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #424242;
+  font-family: 'Montserrat',sans-serif;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 40px;
+  @include transition;
+  backface-visibility: hidden;
+  span{
+    display: block;
+    line-height: 40px;
+    @include transition;
+  }
+  &.--black{
+    color: #fff;
+    background-color: var(--col-black);
+  }
+  &:hover{
+    span{
+      transform: translateY(-40px);
+    }
+  }
+}
 
 .btn-link{
   display: inline-block;

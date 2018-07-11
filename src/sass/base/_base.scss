@@ -57,6 +57,12 @@ strong{
   &.--extra{
     font-size: 36px;
     line-height: 60px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 34px;
+      text-transform: uppercase;
+    }
   }
 }
 

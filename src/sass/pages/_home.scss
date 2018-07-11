@@ -1,0 +1,180 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.home-top{
+  height: 700px;
+  background: url(../img/home-top.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 85px;
+  &__content{
+    position: relative;
+    top: -80px;
+  }
+  &__row{
+    margin: 0 -10px;
+  }
+  &__column{
+    padding: 0 10px;
+    @include grid-size(365px);
+  }
+}
+
+.top-item{
+  height: 235px;
+  &.--type-1{
+    background-color: var(--col-primary);
+  }
+  &.--type-2{
+    background-color: #9d9d9d;
+    .top-item__title, .top-item__subtitle{
+      color: #fff;
+    }
+    .btn-secondary{
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+  &.--type-3{
+    background-color: white;
+    box-shadow: 0 2px 17.9px 3.2px rgba(0, 0, 0, 0.22);
+  }
+  
+  &__content{
+    position: relative;
+    padding: 110px 55px 25px 55px;
+  }
+  &__subtitle{
+    position: absolute;
+    top: 30px;
+    max-width: 235px;
+    display: block;
+    color: #424242;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  &__title{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    i{
+      position: absolute;
+      top: 0;
+      transform: translateX(10px);
+      font-size: 24px;
+    }
+  }
+}
+
+
+
+
+.home-object{
+  margin-bottom: 95px;
+  &__content{
+    padding-top: 30px;
+    max-width: 520px;
+  }
+  &__btn{
+    max-width: 225px;
+  }
+}
+
+
+
+
+
+.home-carousel{
+  margin-bottom: 100px;
+  &__cell{
+    width: 60%;
+    height: 665px;
+    background: url(../img/home-section.png) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  &__item{
+    position: absolute;
+    background-color: var(--col-yellow);
+  }
+  &__price{
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+  &__title{
+    display: block;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home-reviews{
+  margin-bottom: 100px;
+}
+
+
+
+
+.home-section{
+  height: 580px;
+  background: url(../img/home-section.png) center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: 85px;
+  &__content{
+    position: relative;
+  }
+  &__item{
+    position: absolute;
+    left: 0;
+    top: -145px;
+    width: 100%;
+    max-width: 395px;
+    height: 465px;
+    padding: 60px 10px 30px 35px;
+    background-color: var(--col-primary);
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  &__txt{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    max-width: 190px;
+  }
+}

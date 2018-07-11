@@ -2,9 +2,351 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Index</title>
+    <link href="css/build.css" rel="stylesheet">
 </head>
 <body>
+
+
+<div class="page">
+
+    <div class="side-form">
+        <div class="side-form__button">Найміть нас</div>
+        <div class="side-form__item">
+            <div class="side-form__arrow icon-left-arrow"></div>
+            <form action="/" id="side_form">
+                <div class="form__group-30">
+                    <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                </div>
+                <div class="form__group-30">
+                    <input type="text" name="phone" class="form__input" placeholder="Телефон">
+                </div>
+                <div class="form__group-30">
+                    <select name="question" class="form__select">
+                        <option value="0" selected>Що вас цікавить</option>
+                        <option value="1">Що вас цікавить</option>
+                    </select>
+                </div>
+                <div class="form__group-30">
+                    <textarea name="message" class="form__area" placeholder="Повідомлення"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span>надіслати</span>
+                    <span>надіслати</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="row m-row header__row align-middle align-right">
+                    <div class="column header__column">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="/" class="header__link">Головна</a>
+                            </li>
+                            <li class="header__item --drop">
+                                <a class="header__link">Орендарям</a>
+                                <ul class="header__sublist">
+                                    <li>
+                                        <a href="/" class="header__link">квартири</a>
+                                    </li>
+                                    <li>
+                                        <a href="/" class="header__link">офіси</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__item">
+                                <a href="/" class="header__link">Орендодавцям</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="/" class="header__link">Про нас</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="/" class="header__link active">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column col-lg-3 header__column">
+                        <div class="header__phone">
+                            <span>+38098 09 55 687</span>
+                            <span> +38063 02 60 643</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger">
+            <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section page__top">
+        <div class="container">
+            <div class="row m-row">
+                <div class="col-lg-9 column">
+                    <h1 class="app-title --extra">ПРИДБАЄМО НЕРУХОМІСТЬ У БУДЬ-ЯКІЙ ЧАСТИНІ ЛЬВОВА. </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section home-top">
+        <div class="container">
+            <div class="home-top__content">
+                <div class="row m-row home-top__row">
+
+                    <div class="home-top__column">
+                        <div class="top-item --type-1">
+                            <div class="top-item__content">
+                                <span class="top-item__subtitle">Гарантія якості</span>
+                                <span class="top-item__title">
+                                    Оренда
+                                    <i class="icon-left-arrow"></i>
+                                </span>
+                                <a href="/" class="btn btn-secondary">
+                                    <span>Замовити</span>
+                                    <span>Замовити</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-top__column">
+                        <div class="top-item --type-2">
+                            <div class="top-item__content">
+                                <span class="top-item__subtitle">Велика база</span>
+                                <span class="top-item__title">
+                                    купівля
+                                    <i class="icon-left-arrow"></i>
+                                </span>
+                                <a href="/" class="btn btn-secondary">
+                                    <span>Замовити</span>
+                                    <span>Замовити</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-top__column">
+                        <div class="top-item --type-3">
+                            <div class="top-item__content">
+                                <span class="top-item__subtitle">Всебічна допомога і супровід</span>
+                                <span class="top-item__title">
+                                    Продаж
+                                    <i class="icon-left-arrow"></i>
+                                </span>
+                                <a href="/" class="btn btn-secondary">
+                                    <span>Замовити</span>
+                                    <span>Замовити</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section home-object">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-6">
+                    <div class="home-object__content">
+                    <p class="app-subtitle">Ваш ексклюзивний ріелтор</p>
+                    <h2 class="app-title">Вся нерухомість Львова за 30 хв</h2>
+                    <p class="app-txt mb-15">Ваш ексклюзивний ріелтор це новинка на ринку нерухомості.
+                        Компанія надає вам ексклюзивного ріелтора, який працює лише з
+                        вами і забовязується в розумні терміни підшукати вам підходяще
+                        житло,( або ж його продати чи здати в оренду) При цьому нічого не
+                        оплачуючи. Таку функцію можна узгодити в двох напрямках. Перший
+                        можна скласти договір в письмовій формі. Другий можна узгодини
+                        все в усній формі ( В Людських відносинах). Це гарантія того, що цей
+                        ріелтор буде заповнений роботою виключно з вами, це значно
+                        полекшить вам пошуки житла або ж потенційних клієнтів і не потрібно
+                        буде звонити до десятків різних агенств і чути від них пропозиції, які
+                        абсолютно не підходять вашим вимогам.</p>
+                    <a href="/" class="btn btn-primary home-object__btn">
+                        <span>Читати більше</span>
+                        <span>Читати більше</span>
+                    </a>
+                    </div>
+                </div>
+                <div class="column col-lg-6">
+                    <img src="img/adult-chill.png" class="image m-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section home-slider">
+        <div class="home-slider__content">
+            <div class="home-carousel">
+                <div class="home-carousel__cell" style="background-image: url(img/home-carousel.png);">
+                    <div class="home-carousel__item">
+                        <span class="home-carousel__price"></span>
+                        <span class="home-carousel__title"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <srction class="section home-reviews"></srction>
+
+
+
+    <section class="section home-section">
+        <div class="container">
+            <div class="home-section__content">
+                <div class="home-section__item">
+                    <h2 class="home-section__title">Ми Допоможемо Вам
+                        знайти житло вашої мрії</h2>
+                    <p class="home-section__txt">Вам потрібно зняти квартиру у Львові?
+                        Агентство нерухомості «Domler» допоможе
+                        вибрати квартиру у відповідністі з вашими
+                        вимогами і візьме на себе пошук і оформлення
+                        договору оренди. Перегляд квартир з нашим
+                        ріелтором буде у зручний для вас час. Фахівці
+                        агентства допоможуть вам зняти житло у
+                        Львові .</p>
+                    <button class="btn btn-primary --black modalTrigger home-section__btn" data-modal="#user_modal">
+                        <span>Найняти нас</span>
+                        <span>Найняти нас</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row m-row">
+                <div class="column col-lg-3 col-md-2 col-sm-6 col-xs-12 footer__column">
+                    <a href="/" class="footer__logo">Logo</a>
+                </div>
+                <div class="column col-lg-2 col-md-2 col-sm-6 col-xs-12 footer__column">
+                    <span class="footer__title">Карта сайту</span>
+                    <ul class="footer__list">
+                        <li><a href="/">Головна</a></li>
+                        <li><a href="/">Орендодавцям</a></li>
+                        <li><a href="/">Орендарям</a></li>
+                        <li><a href="/">Про нас</a></li>
+                        <li><a href="/">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="column col-lg-3 col-md-4 col-sm-6 col-xs-12 footer__column">
+                    <span class="footer__title">контакти</span>
+                    <p class="footer__txt">
+                        <span>info@domler.com.ua</span>
+                        <br>
+                        <span>+38098 09 55 687</span>
+                        <span> +38063 026 06 43 (Viber)</span>
+                        <span>+38099 763 98 82</span>
+                        <br>
+                        <span>Вул. Лазаренка 2 офіс 217</span>
+                        <span>(3 поверх)</span>
+                    </p>
+                </div>
+                <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-12 footer__column">
+                    <span class="footer__title">Підписатись на оновлення</span>
+                    <p class="footer__txt">У нас завжди цікаво!</p><br>
+                    <div class="footer__form">
+                        <form action="/" id="footer__form">
+                            <input type="email" name="email" class="form__input footer__input" placeholder="info@domler.com.ua">
+                            <button class="btn btn-primary footer__btn">
+                                <span>Надіслати</span>
+                                <span>Надіслати</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            <a href="http://letarget.com.ua" class="copyright__link" target="_blank">developed by letarget</a>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal" id="user_modal">
+    <div class="modal__body">
+        <div class="modal__content user-modal">
+            <span class="modal__close icon-close"></span>
+            <span class="modal__title">заповніть форму</span>
+            <form action="/" id="user_form">
+                <div class="row m-row">
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-30">
+                            <input type="text" name="name" class="form__input" placeholder="Ім’я та прізвище">
+                        </div>
+                        <div class="form__group-30">
+                            <input type="text" name="phone" class="form__input" placeholder="+3 80 .. .. .. ...">
+                        </div>
+                        <div class="form__group-30">
+                            <input type="email" name="email" class="form__input" placeholder="E-mail">
+                        </div>
+                        <div class="form__group-30">
+                            <input type="text" name="address" class="form__input" placeholder="Адреса">
+                        </div>
+                    </div>
+
+                    <div class="column col-md-6 col-xs-12">
+                        <div class="form__group-20">
+                            <select name="date" class="form__select">
+                                <option value="0">Один місяць</option>
+                                <option value="1">2 місяць</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="price_from" class="form__label">Сума</label>
+                            <div class="row m-row">
+                                <div class="column col-lg-6">
+                                    <div class="form__group-30">
+                                        <input type="text" name="price_from" id="price_from" class="form__input --modifier" placeholder="від .... грн">
+                                    </div>
+                                </div>
+                                <div class="column col-lg-6">
+                                    <div class="form__group-30">
+                                        <input type="text" name="price_to" class="form__input --modifier" placeholder="до ... грн">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__group-30">
+                            <textarea name="" class="form__area --modifier" placeholder="Повідомлення"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="column col-xs-12">
+                        <button type="submit" class="btn btn-primary modal__btn">
+                            <span>надіслати</span>
+                            <span>надіслати</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
@@ -12,11 +354,8 @@
 <script src="js/libs/flickity.pkgd.min.js"></script>
 <script src="js/front.js"></script>
 <script type="text/javascript">
-    front.newSlider('.app-screen__carousel',{pageDots: true});
-    front.newSlider('.app-product__top-carousel',{prevNextButtons: false});
-    front.newSlider('.app-product__carousel',{pageDots: true, prevNextButtons: false});
-    front.newSlider('.app-client__carousel');
+    front.newSlider('.object__carousel',{prevNextButtons: false});
+    front.newSlider('.object__nav', {draggable: false, asNavFor: '.object__carousel'});
 </script>
-
 </body>
 </html>
