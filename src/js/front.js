@@ -45,7 +45,16 @@ let front = {
         }
     },
 
+    updateStatus: function (gallery) {
+        let slideCurrent = document.querySelector('.slide-current');
+        let item = gallery.selectedIndex;
+        let slideNumber = item + 1;
+        if (slideNumber > 10) {
+            return false;
+        }
 
+        slideCurrent.textContent = slideNumber;
+    },
 
 
     events: function () {

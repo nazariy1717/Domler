@@ -190,12 +190,47 @@
 
     <section class="section home-slider">
         <div class="home-slider__content">
+
+
+            <div class="home-slider__caption">
+                <div class="home-slider__counter">
+                    <span class="slide-current">1</span>
+                    <span> - </span>
+                    <span class="slide-length">10</span>
+                </div>
+
+                <div class="home-slider__nav">
+                    <button class="btn home-slider__nav-button --prev icon-right-arrow"></button>
+                    <button class="btn home-slider__nav-button --next icon-left-arrow"></button>
+                </div>
+            </div>
+
+
+
             <div class="home-carousel">
                 <div class="home-carousel__cell" style="background-image: url(img/home-carousel.png);">
-                    <div class="home-carousel__item">
-                        <span class="home-carousel__price"></span>
-                        <span class="home-carousel__title"></span>
-                    </div>
+                    <a href="/">
+                        <div class="home-carousel__item">
+                            <span class="home-carousel__price">300$</span>
+                            <span class="home-carousel__title">Затишна 2 кімнатна квартирау центрі львова</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="home-carousel__cell" style="background-image: url(img/home-carousel-2.png);">
+                    <a href="/">
+                        <div class="home-carousel__item">
+                            <span class="home-carousel__price">300$</span>
+                            <span class="home-carousel__title">Затишна 2 кімнатна квартирау центрі львова</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="home-carousel__cell" style="background-image: url(img/home-carousel.png);">
+                    <a href="/">
+                        <div class="home-carousel__item">
+                            <span class="home-carousel__price">300$</span>
+                            <span class="home-carousel__title">Затишна 2 кімнатна квартирау центрі львова</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -205,7 +240,7 @@
 
 
 
-    <srction class="section home-reviews"></srction>
+    <section class="section home-reviews"></section>
 
 
 
@@ -355,8 +390,29 @@
 <script src="js/libs/flickity.pkgd.min.js"></script>
 <script src="js/front.js"></script>
 <script type="text/javascript">
-    front.newSlider('.object__carousel',{prevNextButtons: false});
-    front.newSlider('.object__nav', {draggable: false, asNavFor: '.object__carousel'});
+
+    let gallery_flkty = front.newSlider('.home-carousel', {
+        pageDots: false,
+        prevNextButtons: false,
+        autoPlay: false
+    });
+
+    let slideTotal = document.querySelector('.slide-length');
+    let total = gallery_flkty.slides.length;
+    slideTotal.textContent = total;
+
+
+    gallery_flkty.on('select', function () {
+        front.updateStatus(gallery_flkty);
+    });
+
+    $('.home-slider__nav-button.--prev').on( 'click', function() {
+        gallery_flkty.previous();
+    });
+
+    $('.home-slider__nav-button.--next').on( 'click', function() {
+        gallery_flkty.next();
+    });
 </script>
 </body>
 </html>
