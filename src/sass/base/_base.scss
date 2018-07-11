@@ -54,6 +54,10 @@ strong{
   line-height: 36px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  @media (max-width: $breakpoint-sm){
+    font-size: 24px;
+    line-height: 36px;
+  }
   &.--extra{
     font-size: 36px;
     line-height: 60px;

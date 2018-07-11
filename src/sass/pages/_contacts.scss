@@ -7,6 +7,10 @@
   -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 75px;
+  @media (max-width: $breakpoint-md){
+    height: initial;
+    padding: 75px 0;
+  }
   &__content{
     position: relative;
   }
@@ -19,17 +23,37 @@
     max-width: 450px;
     padding: 55px;
     background-color: var(--col-yellow);
+    @media (max-width: $breakpoint-md){
+      position: initial;
+      right: 0;
+      left: 0;
+      top: initial;
+      max-width: 450px;
+      margin: auto;
+      padding: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px;
+      height: initial;
+    }
   }
   &__title{
     display: block;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 85px;
+    @media (max-width: $breakpoint-md){
+      margin-bottom: 45px;
+    }
   }
   &__txt{
     font-size: 18px;
     font-weight: 400;
     line-height: 36px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 14px;
+      line-height: 24px;
+    }
     &.--upper{
       text-transform: uppercase;
     }
@@ -45,6 +69,9 @@
 
 .contacts-map{
   margin-bottom: 125px;
+  @media (max-width: $breakpoint-sm){
+    margin-bottom: 75px;
+  }
 }
 
 #contacts_map{
@@ -52,4 +79,15 @@
   height: 640px;
   margin-left: auto;
   margin-right: 0;
+  @media (max-width: $breakpoint-lg){
+    margin-top: 45px;
+    width: 100%;
+    max-width: 100%;
+  }
+  @media (max-width: $breakpoint-md){
+    height: 500px;
+  }
+  @media (max-width: $breakpoint-sm){
+    height: 400px;
+  }
 }
