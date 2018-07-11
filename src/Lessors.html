@@ -2,43 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lessors</title>
 
     <link href="css/build.css" rel="stylesheet">
 </head>
 <body>
 
-
 <div class="page">
+
+    <div class="side-form">
+        <div class="side-form__button">Найміть нас</div>
+        <div class="side-form__item">
+            <div class="side-form__arrow icon-left-arrow"></div>
+            <form action="/" id="side_form">
+                <div class="form__group-30">
+                    <input type="text" name="name" class="form__input" placeholder="Ім’я">
+                </div>
+                <div class="form__group-30">
+                    <input type="text" name="phone" class="form__input" placeholder="Телефон">
+                </div>
+                <div class="form__group-30">
+                    <select name="question" class="form__select">
+                        <option value="0" selected>Що вас цікавить</option>
+                        <option value="1">Що вас цікавить</option>
+                    </select>
+                </div>
+                <div class="form__group-30">
+                    <textarea name="message" class="form__area" placeholder="Повідомлення"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span>надіслати</span>
+                    <span>надіслати</span>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <header class="header">
         <div class="container">
-            <div class="row m-row header__row align-middle align-right">
-                <div class="column header__column">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="/" class="header__link">Головна</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/" class="header__link">Орендарям</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/" class="header__link">Орендодавцям</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/" class="header__link">Про нас</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/" class="header__link active">Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="column col-lg-3 header__column">
-                    <div class="header__phone">
-                        <span>+38098 09 55 687</span>
-                        <span> +38063 02 60 643</span>
+            <div class="header__content">
+                <div class="row m-row header__row align-middle align-right">
+                    <div class="column header__column">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="/" class="header__link">Головна</a>
+                            </li>
+                            <li class="header__item --drop">
+                                <a class="header__link">Орендарям</a>
+                                <ul class="header__sublist">
+                                    <li>
+                                        <a href="/" class="header__link">квартири</a>
+                                    </li>
+                                    <li>
+                                        <a href="/" class="header__link">офіси</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__item">
+                                <a href="/" class="header__link">Орендодавцям</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="/" class="header__link">Про нас</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="/" class="header__link active">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column col-lg-3 header__column">
+                        <div class="header__phone">
+                            <span>+38098 09 55 687</span>
+                            <span> +38063 02 60 643</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="hamburger">
+            <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
             </div>
         </div>
     </header>
@@ -62,10 +106,10 @@
 
     <section class="section lessors-section">
         <div class="container">
-            <div class="tenants-section__content">
-                <div class="tenants-section__item">
-                    <span class="tenants-section__subtitle">ми допоможемо вам продати житло</span>
-                    <span class="tenants-section__title">Агентство нерухомості “Domler” продає нерухомість швидко і вигідно</span>
+            <div class="lessors-section__content">
+                <div class="lessors-section__item">
+                    <span class="lessors-section__subtitle">ми допоможемо вам продати житло</span>
+                    <span class="lessors-section__title">Агентство нерухомості “Domler” продає нерухомість швидко і вигідно</span>
                 </div>
             </div>
         </div>
@@ -75,7 +119,7 @@
     <section class="section lessors-object">
         <div class="container">
             <div class="row m-row">
-                <div class="column col-lg-6">
+                <div class="column col-lg-6 col-xs-12">
                     <div class="lessors-object__content">
                         <p class="app-subtitle">Ваш ексклюзивний ріелтор</p>
                         <h2 class="app-title">Чому варто обирати агентство “Domler”</h2>
@@ -94,7 +138,7 @@
                     <div class="lessors-object__block">
                         <div class="row m-row">
                             <div class="lessors-object__item column">
-                                <div class="lessors-object__item-icon icon-hearing_2"></div>
+                                <div class="lessors-object__item-icon icon-hearing"></div>
                                 <span class="lessors-object__item-txt">Слухаємо</span>
                             </div>
                             <div class="lessors-object__item column">
@@ -116,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column col-lg-6">
+                <div class="column col-lg-6 col-xs-12">
                     <img src="img/lessors-image.png" class="image lessors-object__image">
                 </div>
             </div>
@@ -138,13 +182,13 @@
                     тому наш досвід в цій сфері допоможить вам максимально швидко і <br>
                     якісно знайти своє житло або ж його реалізувати.</p>
                 <div class="row m-row align-center">
-                    <div class="column col-lg-3">
+                    <div class="column col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-15">
                         <button type="button" data-modal="#user_modal" class="btn btn-primary modalTrigger lessors-contacts__btn">
                             <span>замовити</span>
                             <span>замовити</span>
                         </button>
                     </div>
-                    <div class="column col-lg-3">
+                    <div class="column col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-15">
                         <div class="lessors-contacts__phone">
                             <span>+38098 09 55 687</span>
                             <span> +38063 02 60 643</span>
@@ -156,16 +200,13 @@
     </section>
 
 
-
-
-
     <footer class="footer">
         <div class="container">
             <div class="row m-row">
-                <div class="column col-lg-3 footer__column">
+                <div class="column col-lg-3 col-md-2 col-sm-6 col-xs-12 footer__column">
                     <a href="/" class="footer__logo">Logo</a>
                 </div>
-                <div class="column col-lg-2 footer__column">
+                <div class="column col-lg-2 col-md-2 col-sm-6 col-xs-12 footer__column">
                     <span class="footer__title">Карта сайту</span>
                     <ul class="footer__list">
                         <li><a href="/">Головна</a></li>
@@ -175,7 +216,7 @@
                         <li><a href="/">Контакти</a></li>
                     </ul>
                 </div>
-                <div class="column col-lg-3 footer__column">
+                <div class="column col-lg-3 col-md-4 col-sm-6 col-xs-12 footer__column">
                     <span class="footer__title">контакти</span>
                     <p class="footer__txt">
                         <span>info@domler.com.ua</span>
@@ -188,7 +229,7 @@
                         <span>(3 поверх)</span>
                     </p>
                 </div>
-                <div class="column col-lg-4 footer__column">
+                <div class="column col-lg-4 col-md-4 col-sm-6 col-xs-12 footer__column">
                     <span class="footer__title">Підписатись на оновлення</span>
                     <p class="footer__txt">У нас завжди цікаво!</p><br>
                     <div class="footer__form">
@@ -212,7 +253,6 @@
     </div>
 
 </div>
-
 
 <div class="modal" id="user_modal">
     <div class="modal__body">
@@ -246,12 +286,12 @@
                         <div class="form__group">
                             <label for="price_from" class="form__label">Сума</label>
                            <div class="row m-row">
-                               <div class="column col-lg-6">
+                               <div class="column col-md-6">
                                    <div class="form__group-30">
                                        <input type="text" name="price_from" id="price_from" class="form__input --modifier" placeholder="від .... грн">
                                    </div>
                                </div>
-                               <div class="column col-lg-6">
+                               <div class="column col-md-6">
                                    <div class="form__group-30">
                                        <input type="text" name="price_to" class="form__input --modifier" placeholder="до ... грн">
                                    </div>
@@ -274,8 +314,6 @@
         </div>
     </div>
 </div>
-
-
 
 <script src="js/libs/jquery-3.2.1.min.js"></script>
 <script src="js/front.js"></script>

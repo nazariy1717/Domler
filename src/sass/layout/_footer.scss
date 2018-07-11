@@ -2,6 +2,9 @@
 @import "../tools/breakpoints";
 
 .footer{
+  @media (max-width: $breakpoint-sm){
+   text-align: center;
+  }
   &__column{
     margin-bottom: 45px;
   }

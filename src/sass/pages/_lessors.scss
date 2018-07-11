@@ -8,6 +8,10 @@
   -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 100px;
+  @media (max-width: $breakpoint-md){
+    height: initial;
+    padding: 0 0 75px 0;
+  }
   &__content{
     position: relative;
   }
@@ -20,12 +24,29 @@
     height: 335px;
     padding: 55px;
     background-color: var(--col-yellow);
+    @media (max-width: $breakpoint-md){
+      position: relative;
+      right: 0;
+      left: 0;
+      max-width: 450px;
+      margin: auto;
+      padding: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px;
+      height: initial;
+    }
+
   }
   &__title{
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
     text-transform: uppercase;
+    @media (max-width: $breakpoint-sm){
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &__subtitle{
     display: block;
@@ -40,8 +61,17 @@
 
 .lessors-object{
   margin-bottom: 220px;
+  @media (max-width: $breakpoint-md){
+    margin-bottom: 150px;
+  }
+  @media (max-width: $breakpoint-sm){
+    margin-bottom: 75px;
+  }
   &__content{
     max-width: 525px;
+    @media (max-width: $breakpoint-lg){
+      max-width: 100%;
+    }
   }
   &__img{
     margin-right: 0;
@@ -57,9 +87,32 @@
     background-color: white;
     padding: 30px 20px 20px 20px;
     box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
+    @media (max-width: $breakpoint-lg){
+      position: relative;
+      left: initial;
+      width: initial;
+      height: initial;
+      z-index: 3;
+      transform: initial;
+      margin: 30px 0;
+    }
+    @media (max-width: $breakpoint-md){
+      .row{
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+    }
   }
   &__item{
     @include grid-size(20%);
+    @media (max-width: $breakpoint-md){
+      @include grid-size(33.33333%);
+    }
+    @media (max-width: $breakpoint-sm){
+      @include grid-size(100%);
+    }
     &:after{
       content: '';
       position: absolute;
@@ -68,6 +121,9 @@
       width: 1px;
       height: 105px;
       background-color: var(--col-black);
+      @media (max-width: $breakpoint-md){
+        display: none;
+      }
     }
     &:last-child{
       &:after{
@@ -79,6 +135,9 @@
       text-align: center;
       padding: 30px 0;
       position: relative;
+      @media (max-width: $breakpoint-lg){
+        font-size: 36px;
+      }
       &:after{
         content: '';
         position: absolute;
@@ -88,6 +147,9 @@
         width: 42px;
         height: 42px;
         background-color: var(--col-yellow);
+        @media (max-width: $breakpoint-sm){
+          display: none;
+        }
       }
     }
     &-txt{
@@ -97,6 +159,10 @@
       font-weight: 400;
       line-height: 34px;
       text-transform: uppercase;
+      @media (max-width: $breakpoint-lg){
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
   }
 }
@@ -104,9 +170,20 @@
 
 .lessors-contacts{
   margin-bottom: 150px;
+  @media (max-width: $breakpoint-sm){
+    margin-bottom: 75px;
+  }
   &__txt{
     margin: auto auto 55px;
     max-width: 580px;
+    @media (max-width: $breakpoint-lg){
+      br{
+        display: none;
+      }
+    }
+    @media (max-width: $breakpoint-sm){
+      margin: auto auto 30px;
+    }
   }
   &__phone{
     position: relative;
