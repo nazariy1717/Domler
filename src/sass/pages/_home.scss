@@ -8,21 +8,53 @@
   -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 85px;
+  @media (max-width: $breakpoint-lg){
+    height: 400px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: $breakpoint-md){
+    height: initial;
+  }
   &__content{
     position: relative;
     top: -80px;
+    @media (max-width: $breakpoint-md){
+      top: 0;
+      padding: 20px 0;
+    }
   }
   &__row{
     margin: 0 -10px;
+    @media (max-width: $breakpoint-lg){
+      margin: 0 -5px;
+    }
   }
   &__column{
     padding: 0 10px;
     @include grid-size(365px);
+    @media (max-width: 1200px){
+      @include grid-size(33.3333%);
+    }
+    @media (max-width: $breakpoint-lg){
+      @include grid-size(215px);
+      padding: 0 5px;
+    }
+    @media (max-width: $breakpoint-md){
+      @include grid-size(100%);
+    }
   }
 }
 
 .top-item{
   height: 235px;
+  @media (max-width: $breakpoint-lg){
+    height: 135px;
+  }
+  @media (max-width: $breakpoint-md){
+    margin-bottom: 20px;
+    max-width: 300px;
+    height: initial;
+  }
   &.--type-1{
     background-color: var(--col-primary);
   }
@@ -44,10 +76,17 @@
   &__content{
     position: relative;
     padding: 110px 55px 25px 55px;
+    @media (max-width: $breakpoint-lg){
+      padding: 45px 20px 0 20px;
+    }
+    @media (max-width: $breakpoint-md){
+      padding: 45px 20px 20px 20px;
+    }
   }
   &__subtitle{
     position: absolute;
-    top: 30px;
+    top: 15px;
+    left: 55px;
     max-width: 235px;
     display: block;
     color: #424242;
@@ -55,6 +94,11 @@
     font-weight: 600;
     line-height: 24px;
     text-transform: uppercase;
+    @media (max-width: $breakpoint-lg){
+      font-size: 10px;
+      line-height: 16px;
+      left: 20px;
+    }
   }
   &__title{
     position: relative;
@@ -64,11 +108,19 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 35px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
     i{
       position: absolute;
       top: 0;
       transform: translateX(10px);
       font-size: 24px;
+      @media (max-width: $breakpoint-lg){
+        font-size: 18px;
+      }
     }
   }
 }
@@ -78,9 +130,21 @@
 
 .home-object{
   margin-bottom: 95px;
+  .row{
+    @media (max-width: $breakpoint-lg){
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
   &__content{
     padding-top: 30px;
     max-width: 520px;
+    @media (max-width: $breakpoint-md){
+      padding-top: 0;
+      margin-bottom: 20px;
+    }
   }
   &__btn{
     max-width: 225px;
@@ -148,6 +212,9 @@
   -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 85px;
+  @media (max-width: $breakpoint-lg){
+    height: 350px;
+  }
   &__content{
     position: relative;
   }
@@ -160,6 +227,10 @@
     height: 465px;
     padding: 60px 10px 30px 35px;
     background-color: var(--col-primary);
+    @media (max-width: $breakpoint-lg){
+      height: initial;
+      padding: 30px 15px 20px 15px;
+    }
   }
   &__title{
     font-size: 20px;
@@ -167,6 +238,10 @@
     line-height: 36px;
     text-transform: uppercase;
     margin-bottom: 25px;
+    @media (max-width: $breakpoint-lg){
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
   &__txt{
     font-size: 14px;
