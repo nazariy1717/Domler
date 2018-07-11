@@ -9,6 +9,9 @@
   }
   &__top{
     margin-bottom: 120px;
+    @media (max-width: $breakpoint-lg){
+      padding-right: 30px;
+    }
     @media (max-width: $breakpoint-sm){
       margin-bottom: 75px;
     }

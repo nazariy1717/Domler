@@ -16,6 +16,10 @@
   -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 60px;
+  @media (max-width: $breakpoint-md){
+    height: initial;
+    padding: 0 0 75px 0;
+  }
   &__item{
     position: absolute;
     left: 0;
@@ -25,12 +29,28 @@
     height: 335px;
     padding: 55px 15px 55px 55px;
     background-color: var(--col-yellow);
+    @media (max-width: $breakpoint-md){
+      position: relative;
+      right: 0;
+      left: 0;
+      max-width: 450px;
+      margin: auto;
+      padding: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px;
+      height: initial;
+    }
   }
   &__title{
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
     text-transform: uppercase;
+    @media (max-width: $breakpoint-md){
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   &__subtitle{
     display: block;
@@ -39,6 +59,9 @@
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 55px;
+    @media (max-width: $breakpoint-md){
+      line-height: 24px;
+    }
   }
 }
 
@@ -53,6 +76,15 @@
     transform: translateY(30px);
     background-color: white;
     box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
+    @media (max-width: $breakpoint-lg){
+      position: relative;
+      right: initial;
+      width: initial;
+      height: initial;
+      transform: initial;
+      z-index: 3;
+      margin-top: 30px;
+    }
     &-title{
       display: block;
       position: absolute;
@@ -62,6 +94,15 @@
       font-weight: 600;
       line-height: 34px;
       text-transform: uppercase;
+      @media (max-width: 1200px){
+        bottom: -60px;
+      }
+      @media (max-width: $breakpoint-sm){
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 16px;
+      }
     }
   }
   &__count{
@@ -89,18 +130,28 @@
     font-weight: 600;
     line-height: 24px;
     text-transform: uppercase;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 15px;
+    }
   }
 
 }
 
 .about-section-2{
   margin-bottom: 220px;
+  @media (max-width: $breakpoint-md){
+    margin-bottom: 150px;
+  }
   &__content{
     position: relative;
     height: 550px;
     background: url(../img/about-section-2.png) center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    @media (max-width: $breakpoint-md){
+      height: initial;
+      padding: 0 0 75px 0;
+    }
   }
   &__item{
     position: absolute;
@@ -111,6 +162,18 @@
     height: 271px;
     padding: 40px 50px 10px 20px;
     background-color: var(--col-yellow);
+    @media (max-width: $breakpoint-md){
+      position: relative;
+      right: 0;
+      left: 0;
+      max-width: 450px;
+      margin: auto;
+      padding: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px;
+      height: initial;
+    }
   }
   &__title{
     font-size: 20px;
@@ -133,6 +196,10 @@
   -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 85px;
+  @media (max-width: $breakpoint-md){
+    height: initial;
+    padding: 0 0 75px 0;
+  }
   &__item{
     position: absolute;
     left: 0;
@@ -143,6 +210,18 @@
     padding: 60px 10px 30px 35px;
     background-color: #fff;
     box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
+    @media (max-width: $breakpoint-md){
+      position: relative;
+      right: 0;
+      left: 0;
+      max-width: 450px;
+      margin: auto;
+      padding: 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px;
+      height: initial;
+    }
   }
   &__title{
     font-size: 20px;
@@ -150,6 +229,10 @@
     line-height: 36px;
     text-transform: uppercase;
     margin-bottom: 25px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
   &__txt{
     font-size: 14px;
