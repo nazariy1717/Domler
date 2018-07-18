@@ -66,6 +66,10 @@
     .btn-secondary{
       color: #fff;
       border-color: #fff;
+      &:hover{
+        color: #424242;
+        background-color: #fff;
+      }
     }
   }
   &.--type-3{
@@ -157,7 +161,7 @@
 .home-slider{
   &__content{
     position: relative;
-    max-width: 1366px;
+    //max-width: 1366px;
     margin: 0 auto;
     @media (max-width: $breakpoint-md){
       padding-top: 75px;
@@ -214,6 +218,9 @@
     border: 2px solid var(--col-primary);
     & + &{
       border-left: 0;
+    }
+    &:hover{
+      background-color: var(--col-primary);
     }
   }
 }

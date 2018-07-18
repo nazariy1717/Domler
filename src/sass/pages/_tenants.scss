@@ -103,11 +103,14 @@
   max-width: 385px;
   margin: auto;
   height: 100%;
+  overflow: hidden;
   background-color: white;
   box-shadow: 0 5px 8px 0.6px rgba(0, 0, 0, 0.09);
   @include transition;
   &:hover{
-    transform: translateY(-5px);
+    .object-item__image{
+      transform: scale(1.1);
+    }
   }
   &.--small{
     max-width: 285px;
@@ -121,8 +124,12 @@
     background: center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    @include transition;
   }
   &__content{
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
     padding: 15px 20px;
     .column:nth-child(1){
       @include grid-size(calc(100% - 120px));

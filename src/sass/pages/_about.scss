@@ -67,6 +67,10 @@
 
 .about-success{
   margin-bottom: 165px;
+  padding-bottom: 150px;
+  @media (max-width: $breakpoint-lg){
+    padding-bottom: 0;
+  }
   &__block{
     position: absolute;
     right: 0;

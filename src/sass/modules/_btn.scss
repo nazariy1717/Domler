@@ -65,15 +65,17 @@
   span{
     display: block;
     line-height: 40px;
-    @include transition;
   }
   &.--black{
     color: #fff;
     background-color: var(--col-black);
   }
   &:hover{
+    border: 1px solid #424242;
+    background-color: #424242;
+    color: #fff;
     span{
-      transform: translateY(-40px);
+      transform: translateY(0);
     }
   }
 }
