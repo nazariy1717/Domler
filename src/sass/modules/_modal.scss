@@ -95,7 +95,6 @@
   @media (max-width: $breakpoint-sm) {
     padding: 30px 15px;
     max-width: 320px;
-
   }
   .modal__title{
     margin-bottom: 15px;
@@ -109,6 +108,51 @@
 }
 
 
+.certificates-modal{
+  position: relative;
+  max-width: 1200px;
+  padding: 90px;
+  @media (max-width: $breakpoint-sm) {
+    padding: 30px 15px;
+  }
+  .flickity-prev-next-button{
+    color: #B8B8B8;
+  }
+  .flickity-page-dots{
+    bottom: -50px;
+    @media (max-width: $breakpoint-sm) {
+      bottom: -20px;
+    }
+  }
+  .flickity-page-dots .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    background-color: yellow;
+  }
+  .flickity-page-dots .dot.is-selected{
+    background-color: black;
+  }
+
+  &__carousel{
+
+  }
+  &__cell{
+    width: 100%;
+    height: 500px;
+    @media (max-width: $breakpoint-sm) {
+      height: 350px;
+    }
+    img{
+      box-shadow: 0 0 48px 3px rgba(0, 0, 0, 0.09);
+      margin: auto;
+      max-height: 500px;
+      @media (max-width: $breakpoint-sm) {
+        max-height: 350px;
+      }
+    }
+  }
+}
 
 
 

@@ -26,7 +26,6 @@
     top: -60px;
     width: 100%;
     max-width: 515px;
-    height: 335px;
     padding: 55px 15px 55px 55px;
     background-color: var(--col-yellow);
     @media (max-width: $breakpoint-md){
@@ -163,8 +162,7 @@
     top: -40px;
     width: 100%;
     max-width: 410px;
-    height: 271px;
-    padding: 40px 50px 10px 20px;
+    padding: 40px 50px 20px 20px;
     background-color: var(--col-yellow);
     @media (max-width: $breakpoint-md){
       position: relative;
@@ -210,7 +208,6 @@
     top: -115px;
     width: 100%;
     max-width: 395px;
-    height: 465px;
     padding: 60px 10px 30px 35px;
     background-color: #fff;
     box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
