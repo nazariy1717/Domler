@@ -92,13 +92,16 @@
       display: block;
       position: absolute;
       bottom: -40px;
-      left: 90px;
+      left: 200px;
       font-size: 18px;
       font-weight: 600;
       line-height: 34px;
       text-transform: uppercase;
       @media (max-width: 1200px){
         bottom: -60px;
+      }
+      @media (max-width: $breakpoint-lg){
+        left: 0;
       }
       @media (max-width: $breakpoint-sm){
         left: 0;
