@@ -331,22 +331,39 @@
   &.--type-2{
     .review__content{
       max-width: 440px;
+      @media (max-width: $breakpoint-xl){
+        max-width: 100%;
+      }
     }
     .review__image{
+      width: 440px;
       height: 475px;
-      @media (max-width: $breakpoint-md){
-        height: 375px;
+      @media (max-width: $breakpoint-xl){
+        width: auto;
+        height: auto;
+      }
+      iframe{
+        width: 100%!important;
+        height: 475px!important;
+        @media (max-width: $breakpoint-xl){
+          height: 350px!important;
+        }
       }
     }
     .review__name{
       width: 475px;
-      left: -225px;
+      left: -250px;
       top: 225px;
+      @media (max-width: $breakpoint-xl){
+        width: 350px;
+        left: -188px;
+        top: 165px;
+      }
     }
   }
   &__name{
     position: absolute;
-    left: -180px;
+    left: -205px;
     top: 180px;
     bottom: 0;
     z-index: 3;
@@ -360,32 +377,39 @@
     line-height: 24px;
     text-transform: uppercase;
     transform: rotate(-90deg);
-    @media (max-width: $breakpoint-md){
-      left: -125px!important;
-      top: 125px!important;
-      bottom: 0;
-      z-index: 3;
-      width: 275px!important;
+    @media (max-width: $breakpoint-xl){
+      font-size: 13px;
+      width: 350px;
+      left: -188px;
+      top: 165px;
     }
   }
   &__content{
     max-width: 580px;
     margin-left: auto;
     margin-right: 0;
-    @media (max-width: $breakpoint-sm){
-      max-width: 100%!important;
+    @media (max-width: $breakpoint-xl){
+      max-width: 100%;
+      padding-left: 15px;
     }
   }
   &__image-wrap{
     position: relative;
   }
   &__image{
+    width: 580px;
     height: 385px;
-    background: center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    @media (max-width: $breakpoint-md){
-      height: 275px!important;
+    overflow: hidden;
+    iframe{
+      width: 100%!important;
+      height: 385px!important;
+      @media (max-width: $breakpoint-xl){
+        height: 350px!important;
+      }
+    }
+    @media (max-width: $breakpoint-xl){
+      width: auto;
+      height: auto;
     }
   }
   &__image-overlay{
@@ -395,6 +419,19 @@
     top: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.53);
+    @media (max-width: $breakpoint-md){
+      bottom: 10px;
+    }
+    i{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      padding: 20px;
+      font-size: 40px;
+      cursor: pointer;
+      color: var(--col-primary);
+    }
   }
   &__txt{
     display: block;
@@ -406,8 +443,9 @@
     text-transform: uppercase;
     max-width: 350px;
     margin: 10px auto auto;
-    @media (max-width: $breakpoint-md){
+    @media (max-width: $breakpoint-lg){
       font-size: 12px;
+      line-height: 18px;
     }
   }
 }
