@@ -122,9 +122,21 @@
   &__item{
     margin-bottom: 30px;
     &-icon{
+      position: relative;
       text-align: center;
       font-size: 30px;
-      margin-bottom: 15px;
+      width: 30px;
+      margin: auto auto 15px;
+      &:after{
+        content: '';
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        z-index: -1;
+        width: 20px;
+        height: 20px;
+        background-color: var(--col-yellow);
+      }
     }
     &-txt{
       display: block;

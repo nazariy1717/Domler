@@ -150,13 +150,12 @@
   }
   &__content{
     position: relative;
-    height: 550px;
-    background: url(../img/about-section-2.png) center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
     @media (max-width: $breakpoint-md){
       height: initial;
       padding: 0 0 75px 0;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 0;
     }
   }
   &__item{
@@ -176,8 +175,9 @@
       padding: 45px;
     }
     @media (max-width: $breakpoint-sm){
-      padding: 30px;
+      padding: 20px 30px;
       height: initial;
+      top: initial;
     }
   }
   &__title{
@@ -186,12 +186,20 @@
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-sm){
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
   }
   &__txt{
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 15px;
+    }
   }
 }
 

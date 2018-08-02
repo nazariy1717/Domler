@@ -106,11 +106,7 @@
   background-color: white;
   box-shadow: 0 5px 8px 0.6px rgba(0, 0, 0, 0.09);
   @include transition;
-  &:hover{
-    .object-item__image{
-      transform: scale(1.1);
-    }
-  }
+
   &.--small{
     max-width: 285px;
     margin: auto;
@@ -124,10 +120,34 @@
     -webkit-background-size: cover;
     background-size: cover;
     @include transition;
+    &:hover{
+      transform: scale(1.1);
+      .object-item__overlay{
+        opacity: 1;
+      }
+    }
+  }
+  &__overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+    @include transition;
+    a{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
   }
   &__content{
     position: relative;
     z-index: 3;
+    min-height: 100px;
     background-color: #fff;
     padding: 15px 20px;
     .column:nth-child(1){

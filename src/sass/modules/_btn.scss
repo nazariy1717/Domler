@@ -70,6 +70,16 @@
     color: #fff;
     background-color: var(--col-black);
   }
+  &.--white{
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    &:hover{
+      color: #424242;
+      border: 1px solid #fff;
+      background-color: #fff;
+    }
+  }
   &:hover{
     border: 1px solid #424242;
     background-color: #424242;
