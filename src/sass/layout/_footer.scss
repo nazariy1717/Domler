@@ -82,8 +82,12 @@
     top: 0;
     width: 110px;
     height: 55px;
-    background-color: var(--col-black);
-    color: #fff;
+    color: var(--col-black);
+    border: 2px solid  var(--col-black);
+    &:hover{
+      color: #fff;
+      background-color: var(--col-black);
+    }
     @media (max-width: $breakpoint-lg){
       height: 35px;
       span{

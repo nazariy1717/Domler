@@ -60,11 +60,7 @@
 
 
 .lessors-object{
-  margin-bottom: 220px;
-  padding-bottom: 150px;
-  @media (max-width: $breakpoint-lg){
-    padding-bottom: 0;
-  }
+  margin-bottom: 200px;
   @media (max-width: $breakpoint-md){
     margin-bottom: 150px;
   }
@@ -82,12 +78,10 @@
     margin-left: auto;
   }
   &__block{
-    position: absolute;
-    left: 15px;
-    width: 910px;
+    position: relative;
     z-index: 9;
-    transform: translateY(50px);
     background-color: white;
+    margin-top: 30px;
     padding: 30px 20px 20px 20px;
     box-shadow: 0 2px 36.6px 6.5px rgba(0, 0, 0, 0.13);
     @media (max-width: $breakpoint-lg){
@@ -110,6 +104,7 @@
   }
   &__item{
     @include grid-size(20%);
+    text-align: center;
     @media (max-width: $breakpoint-md){
       @include grid-size(33.33333%);
     }
@@ -144,7 +139,7 @@
       &:after{
         content: '';
         position: absolute;
-        right: 30px;
+        transform: translateX(-20px);
         top: 15px;
         z-index: -1;
         width: 42px;
@@ -166,6 +161,12 @@
         font-size: 14px;
         line-height: 24px;
       }
+    }
+    &-desc{
+      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 5px;
     }
   }
 }

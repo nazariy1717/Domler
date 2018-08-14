@@ -18,7 +18,8 @@
   width: 100%;
   height: 50px;
   padding: 0;
-  background-color: var(--col-primary);
+  background-color: transparent;
+  border: 2px solid var(--col-primary);
   cursor: pointer;
   text-align: center;
   color: black;
@@ -32,13 +33,18 @@
   span{
     display: block;
     line-height: 50px;
-    @include transition;
+    transition: transform 0.3s;
   }
   &.--black{
-    color: #fff;
-    background-color: var(--col-black);
+    color: var(--col-black);
+    border: 2px solid  var(--col-black);
+    &:hover{
+      color: #fff;
+      background-color: var(--col-black);
+    }
   }
   &:hover{
+    background-color: var(--col-primary);
     span{
       transform: translateY(-50px);
     }
